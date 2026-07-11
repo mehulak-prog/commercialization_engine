@@ -1,29 +1,3 @@
-"""
-ml_model.py
------------
-Hybrid ML core for the commercialization decision engine.
-
-1. UNSUPERVISED ML: KMeans clustering groups concepts into behavioral
-   patterns purely from engineered features (no labels needed/available,
-   which is realistic — these are brand-new concepts with no historical
-   outcome data to supervise on).
-
-2. WEIGHTED SCORING MODEL: converts features into an interpretable 0-100
-   readiness score, using explicit, documented weights (this is the
-   "rule baseline" the brief explicitly allows, but here it is NOT the
-   only method — it works together with the clustering).
-
-3. RULE-BASED OUTCOME MAPPING: readiness score + confidence + specific
-   feature thresholds (feasibility, repeatability, segment diversity)
-   determine the recommended commercial outcome.
-
-4. EXPLAINABILITY: for each concept we compute each feature's weighted
-   contribution to the readiness score (interpretable-model-factors
-   style explanation, in the spirit of SHAP without requiring SHAP).
-
-Output: ../data/scored_concepts.csv
-"""
-
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -98,17 +72,14 @@ def run_model():
     readiness_score = (raw_score - objection_penalty).clip(0, 100)
     features["readiness_score"] = readiness_score.round(1)
 
-    # ---- 3. Confidence already computed in feature engineering; adjust
-    #         slightly using cluster cohesion (how close concept is to its
-    #         cluster centroid = more "typical"/reliable signal) ----
+
     distances = kmeans.transform(X_scaled)
     own_cluster_dist = distances[np.arange(len(features)), features["cluster"]]
-    # normalize distance -> cohesion bonus/penalty capped at +-10 points
     dist_norm = (own_cluster_dist - own_cluster_dist.min()) / (np.ptp(own_cluster_dist) + 1e-9)
     cohesion_adjustment = (1 - dist_norm) * 10 - 5
     features["confidence_score"] = (features["confidence_score"] + cohesion_adjustment).clip(0, 100).round(1)
 
-    # ---- 4. Rule-based outcome mapping ----
+    # ---- 3. Rule-based outcome mapping ----
     def decide_outcome(row):
         score = row["readiness_score"]
         conf = row["confidence_score"]
@@ -121,12 +92,6 @@ def run_model():
             return "Incubate" if score >= 35 else "Archive"
         if score < 35:
             return "Archive"
-        # MVP Build is checked BEFORE Reusable Asset: a concept that is both
-        # highly ready/feasible AND broadly repeatable across segments should
-        # be prioritized as build-ready, not deprioritized into the platform-
-        # component bucket purely because of rule check order. (Originally
-        # Reusable Asset was checked first, which silently reclassified
-        # strong MVP-ready concepts -- caught during testing, documented here.)
         if score >= 65 and feasible >= 0.5:
             return "MVP Build"
         if repeat >= 0.55 and seg_div >= 0.5 and score >= 55:
@@ -139,7 +104,7 @@ def run_model():
 
     features["recommended_outcome"] = features.apply(decide_outcome, axis=1)
 
-    # ---- 5. Explainable evidence: top contributing / detracting factors ----
+    # ---- 4. Explainable evidence: top contributing / detracting factors ----
     def top_evidence(idx):
         row_contrib = contributions.loc[idx].sort_values(ascending=False)
         top_pos = row_contrib.index[0]

@@ -1,18 +1,3 @@
-"""
-app.py
-------
-Streamlit dashboard for the AI/ML Commercialization Decision Engine.
-
-Run with:  streamlit run src/app.py
-
-Reads the already-computed data/scored_concepts.csv (output of
-ml_model.py). Does NOT re-run the ML pipeline on every interaction --
-that would be slow and pointless since the underlying data doesn't
-change on a filter click. AI narratives are generated on-demand per
-concept (button click), not for all 40 concepts automatically, to avoid
-burning API quota/rate limits unnecessarily.
-"""
-
 import sys
 from pathlib import Path
 
@@ -42,9 +27,7 @@ OUTCOME_COLORS = {
 }
 
 
-# ---------------------------------------------------------------------
-# Data loading (cached so filters/interactions don't re-read from disk)
-# ---------------------------------------------------------------------
+# Data loading 
 @st.cache_data
 def load_scored_data():
     path = DATA_DIR / "scored_concepts.csv"
@@ -74,9 +57,7 @@ def missing_data_notice():
     st.stop()
 
 
-# ---------------------------------------------------------------------
 # Sidebar: filters + AI settings
-# ---------------------------------------------------------------------
 def render_sidebar(df: pd.DataFrame):
     st.sidebar.title("Filters")
 
@@ -118,9 +99,7 @@ def render_sidebar(df: pd.DataFrame):
     return filtered, api_key
 
 
-# ---------------------------------------------------------------------
 # KPI row
-# ---------------------------------------------------------------------
 def render_kpis(df: pd.DataFrame):
     cols = st.columns(5)
     cols[0].metric("Total Concepts", len(df))
@@ -132,9 +111,7 @@ def render_kpis(df: pd.DataFrame):
     cols[4].metric("MVP-Ready Concepts", mvp_count)
 
 
-# ---------------------------------------------------------------------
 # Tab 1: Portfolio Overview
-# ---------------------------------------------------------------------
 def render_portfolio_tab(df: pd.DataFrame):
     if df.empty:
         st.warning("No concepts match the current filters.")
@@ -182,9 +159,7 @@ def render_portfolio_tab(df: pd.DataFrame):
     )
 
 
-# ---------------------------------------------------------------------
 # Tab 2: Concept Explorer (search + detail view)
-# ---------------------------------------------------------------------
 def render_explorer_tab(df: pd.DataFrame, raw_tables: dict, api_key: str):
     if df.empty:
         st.warning("No concepts match the current filters.")
@@ -286,9 +261,8 @@ def render_explorer_tab(df: pd.DataFrame, raw_tables: dict, api_key: str):
                     st.dataframe(subset, use_container_width=True, hide_index=True)
 
 
-# ---------------------------------------------------------------------
+
 # Tab 3: Explainability
-# ---------------------------------------------------------------------
 def render_explainability_tab(df: pd.DataFrame):
     if df.empty:
         st.warning("No concepts match the current filters.")
@@ -346,9 +320,8 @@ def render_explainability_tab(df: pd.DataFrame):
     st.plotly_chart(fig, use_container_width=True)
 
 
-# ---------------------------------------------------------------------
+
 # Main
-# ---------------------------------------------------------------------
 def main():
     st.title("\U0001F4CA AI/ML Commercialization Decision Engine")
     st.caption(

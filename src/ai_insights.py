@@ -1,26 +1,3 @@
-"""
-ai_insights.py
---------------
-Narrative Generation module (the "AI insight layer" required by the brief).
-
-Turns numeric model output (readiness score, confidence score, top/weakest
-factor, recommended outcome) into a human-readable, analyst-style
-explanation for each concept.
-
-Two modes:
-  1. LLM mode (Groq, llama-3.1-8b-instant) — richer, more dynamic narrative,
-     used when an API key is provided and the call succeeds.
-  2. Offline template mode — deterministic, always works, used as a
-     fallback if no API key is given or the API call fails/times out.
-     Templates are anchored on the 5 user-provided outcome templates,
-     with the concept's actual readiness score, confidence score, and
-     top/weakest factor substituted in dynamically.
-
-This module never raises an uncaught exception up to the caller — any
-LLM failure is caught and silently falls back to the offline template,
-so a live demo never breaks because of a network hiccup or rate limit.
-"""
-
 import requests
 import pandas as pd
 from pathlib import Path
@@ -30,10 +7,8 @@ GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
 REQUEST_TIMEOUT_SECONDS = 12
 
-# ---------------------------------------------------------------------
-# Offline templates — anchored on the user's own 5 outcome templates,
-# with {placeholders} for dynamic substitution.
-# ---------------------------------------------------------------------
+# Offline templates - anchored on the user's own 5 outcome templates,
+
 OFFLINE_TEMPLATES = {
     "MVP Build": (
         "This concept is recommended for MVP Build because it demonstrates "

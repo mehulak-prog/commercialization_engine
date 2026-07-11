@@ -1,30 +1,3 @@
-"""
-generate_data.py
------------------
-Generates a realistic, noisy mock dataset simulating customer demo, sandbox
-usage, commercial, and text feedback signals for a set of early-stage AI
-product concepts.
-
-Design principle: each concept has a HIDDEN latent "true readiness" profile
-(demand, repeatability, feasibility, strategic fit) that we do NOT expose
-directly. Instead, we use it to bias the generation of noisy, partially
-missing, sometimes contradictory raw signals across five related tables —
-exactly like real messy pre-commercialization data would look. The ML
-pipeline later has to re-discover the pattern from these raw signals, which
-is the whole point of the exercise.
-
-Outputs (in ../data/):
-  - product_concepts.csv
-  - customer_demo_signals.csv
-  - sandbox_usage.csv
-  - commercial_signals.csv
-  - text_feedback.csv
-  - _ground_truth_debug.csv   (latent scores, NOT to be used as a model
-                                feature — kept only for your own sanity
-                                checking / writeup, delete before submitting
-                                if you want a stricter exercise)
-"""
-
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -37,13 +10,8 @@ OUT_DIR = Path(__file__).resolve().parent.parent / "data"
 OUT_DIR.mkdir(exist_ok=True)
 
 N_STANDARD_CONCEPTS = 40
-N_FLAGSHIP_CONCEPTS = 10   # concepts modeled as having undergone extra internal
-                            # refinement/vetting before their first customer
-                            # touchpoint -- genuinely higher-quality latent
-                            # distribution, but still fully noisy downstream.
-                            # Outcomes are NOT hardcoded; they still depend
-                            # entirely on the same scoring/rule pipeline as
-                            # every other concept.
+N_FLAGSHIP_CONCEPTS = 10   
+                            
 N_CONCEPTS = N_STANDARD_CONCEPTS + N_FLAGSHIP_CONCEPTS
 
 INDUSTRIES = ["Healthcare", "Retail", "Financial Services", "Manufacturing",
@@ -84,18 +52,7 @@ def clip(x, lo, hi):
 def generate():
     concept_ids = make_concept_ids(N_CONCEPTS)
 
-    # ---- 1. Latent (hidden) readiness drivers per concept ----
-    # These are NOT written to product_concepts.csv directly as a single
-    # score. They only bias how noisy the downstream tables get generated.
-    #
-    # Two blocks, concatenated:
-    #   - Standard concepts: beta(2,2)/beta(2.5,2) -- centered ~0.5, realistic
-    #     spread of early-stage ideas (as before).
-    #   - Flagship concepts: beta(5,2) -- genuinely higher-quality latent
-    #     distribution (mean ~0.71 vs ~0.5), representing concepts that
-    #     underwent additional internal refinement before their first
-    #     customer touchpoint. This does NOT guarantee any specific outcome
-    #     -- the same noise, same formulas, same rules apply downstream.
+    #1. Latent (hidden) readiness drivers per concept 
     n_std = N_STANDARD_CONCEPTS
     n_flag = N_FLAGSHIP_CONCEPTS
     latent = pd.DataFrame({
@@ -115,12 +72,10 @@ def generate():
         "is_flagship": [False] * n_std + [True] * n_flag,
     })
 
-    # Shuffle so flagship concepts are randomly scattered across the ID
-    # range instead of predictably clustered at C041-C050 -- avoids an
-    # obvious, easily-noticed pattern where "later IDs = better outcomes".
+    
     shuffle_idx = rng.permutation(len(latent))
     latent = latent.iloc[shuffle_idx].reset_index(drop=True)
-    latent["concept_id"] = concept_ids  # reassign sequential IDs post-shuffle
+    latent["concept_id"] = concept_ids 
     latent["true_composite"] = (
         0.32 * latent["true_demand_intensity"]
         + 0.28 * latent["true_repeatability"]
@@ -161,7 +116,7 @@ def generate():
     cust_counter = 1
     for i, cid in enumerate(concept_ids):
         demand = latent.loc[i, "true_demand_intensity"]
-        n_demos = int(rng.integers(2, 9))  # 2-8 demo sessions per concept
+        n_demos = int(rng.integers(2, 9))  t
         start_date = datetime(2025, 9, 1)
         end_date = datetime(2026, 6, 30)
         for _ in range(n_demos):

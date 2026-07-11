@@ -1,23 +1,3 @@
-"""
-feature_engineering.py
------------------------
-Aggregates the five raw, noisy, per-customer/per-session tables into a
-single concept-level feature table ready for ML. Explicitly handles
-missing data (imputation with documented strategy, not silent drops) and
-engineers the feature groups called out in the assignment brief:
-
-  - demand intensity
-  - repeatability
-  - engagement depth
-  - segment similarity
-  - revenue potential
-  - feasibility
-  - strategic fit
-  - confidence (based on evidence volume / data completeness)
-
-Output: ../data/concept_features.csv  (one row per concept_id)
-"""
-
 import numpy as np
 import pandas as pd
 from pathlib import Path
