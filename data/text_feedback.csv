@@ -1,0 +1,217 @@
+customer_id,concept_id,customer_comments,pain_point_statements,objection_themes,requested_capabilities
+CUST0001,C001,Several stakeholders asked when they could start a pilot.,,accuracy concerns; data privacy,
+CUST0002,C001,"Interesting demo, but we need to see it work on our own data first.",,,
+CUST0003,C001,The team didn't see a strong enough case to prioritize this now.,hard to get buy-in from leadership,change management; accuracy concerns,mobile access; API access
+CUST0004,C001,"Interesting demo, but we need to see it work on our own data first.",,accuracy concerns; data privacy,offline mode
+CUST0005,C001,,lack of visibility into root causes; hard to get buy-in from leadership,unclear ROI,
+CUST0006,C001,This addresses a real bottleneck in our current workflow.,lack of visibility into root causes,,custom alert thresholds; multi-language support
+CUST0007,C001,Leadership seemed genuinely excited after the walkthrough.,team lacks technical bandwidth,change management,offline mode; better reporting dashboard
+CUST0008,C001,Leadership seemed genuinely excited after the walkthrough.,lack of visibility into root causes; integration with legacy systems is painful,,mobile access; offline mode
+CUST0009,C002,This addresses a real bottleneck in our current workflow.,,,
+CUST0010,C002,"Some good ideas here, though the value wasn't fully clear to everyone.",lack of visibility into root causes,change management; integration effort,multi-language support
+CUST0011,C002,Concerns about accuracy came up multiple times during the session.,too many false positives,vendor lock-in,custom alert thresholds
+CUST0012,C002,The team was impressed with how quickly it surfaced patterns we'd missed.,,change management; unclear ROI,
+CUST0013,C003,"Some good ideas here, though the value wasn't fully clear to everyone.",,price; integration effort,audit trail
+CUST0014,C003,,current tools don't scale; hard to get buy-in from leadership,,
+CUST0015,C004,The team had mixed reactions and wants a follow-up session.,team lacks technical bandwidth,accuracy concerns; timeline,
+CUST0016,C004,"Interesting demo, but we need to see it work on our own data first.",,integration effort,multi-language support
+CUST0017,C005,The team had mixed reactions and wants a follow-up session.,team lacks technical bandwidth,data privacy,better reporting dashboard; multi-language support
+CUST0018,C005,Leadership seemed genuinely excited after the walkthrough.,,,better reporting dashboard; audit trail
+CUST0019,C005,"Some good ideas here, though the value wasn't fully clear to everyone.",integration with legacy systems is painful,integration effort; change management,API access; role-based permissions
+CUST0020,C005,This overlaps too much with a tool we already have in place.,too many false positives,,API access; mobile access
+CUST0021,C005,"Some good ideas here, though the value wasn't fully clear to everyone.",,data privacy,
+CUST0022,C005,This addresses a real bottleneck in our current workflow.,,accuracy concerns; price,
+CUST0023,C005,Concerns about accuracy came up multiple times during the session.,current tools don't scale,,audit trail
+CUST0024,C006,Leadership seemed genuinely excited after the walkthrough.,,accuracy concerns; vendor lock-in,better reporting dashboard; audit trail
+CUST0025,C006,The team was impressed with how quickly it surfaced patterns we'd missed.,too many false positives,price,
+CUST0026,C006,Leadership seemed genuinely excited after the walkthrough.,current tools don't scale; integration with legacy systems is painful,,
+CUST0027,C006,Several stakeholders asked when they could start a pilot.,lack of visibility into root causes,,
+CUST0028,C006,Several stakeholders asked when they could start a pilot.,,timeline; unclear ROI,
+CUST0029,C006,The team had mixed reactions and wants a follow-up session.,manual process takes too long,unclear ROI,API access
+CUST0030,C006,The team was impressed with how quickly it surfaced patterns we'd missed.,integration with legacy systems is painful; team lacks technical bandwidth,price,audit trail
+CUST0031,C006,"Some good ideas here, though the value wasn't fully clear to everyone.",team lacks technical bandwidth; data quality issues slow us down,unclear ROI,mobile access
+CUST0032,C007,The team had mixed reactions and wants a follow-up session.,too many false positives,data privacy; integration effort,multi-language support; better reporting dashboard
+CUST0033,C007,,integration with legacy systems is painful,integration effort; data privacy,
+CUST0034,C008,The team didn't see a strong enough case to prioritize this now.,,vendor lock-in,offline mode
+CUST0035,C008,This overlaps too much with a tool we already have in place.,,integration effort; vendor lock-in,custom alert thresholds; audit trail
+CUST0036,C008,Several stakeholders asked when they could start a pilot.,hard to get buy-in from leadership,price; accuracy concerns,
+CUST0037,C008,Several stakeholders asked when they could start a pilot.,hard to get buy-in from leadership,change management,multi-language support
+CUST0038,C008,,,price; timeline,multi-language support
+CUST0039,C008,Several stakeholders asked when they could start a pilot.,,,role-based permissions
+CUST0040,C008,,data quality issues slow us down,,better reporting dashboard; API access
+CUST0041,C008,Concerns about accuracy came up multiple times during the session.,,price; integration effort,multi-language support; offline mode
+CUST0042,C009,Leadership seemed genuinely excited after the walkthrough.,current tools don't scale; data quality issues slow us down,unclear ROI,mobile access
+CUST0043,C009,"Interesting demo, but we need to see it work on our own data first.",current tools don't scale; team lacks technical bandwidth,integration effort; change management,
+CUST0044,C009,This addresses a real bottleneck in our current workflow.,,accuracy concerns; vendor lock-in,audit trail; offline mode
+CUST0045,C009,This addresses a real bottleneck in our current workflow.,,accuracy concerns,
+CUST0046,C010,Concerns about accuracy came up multiple times during the session.,,,multi-language support
+CUST0047,C010,This overlaps too much with a tool we already have in place.,,vendor lock-in,
+CUST0048,C010,Leadership seemed genuinely excited after the walkthrough.,,,
+CUST0049,C010,The team was impressed with how quickly it surfaced patterns we'd missed.,integration with legacy systems is painful; current tools don't scale,accuracy concerns; vendor lock-in,audit trail; custom alert thresholds
+CUST0050,C010,This overlaps too much with a tool we already have in place.,,,custom alert thresholds
+CUST0051,C011,Several stakeholders asked when they could start a pilot.,team lacks technical bandwidth,unclear ROI; accuracy concerns,
+CUST0052,C011,This addresses a real bottleneck in our current workflow.,too many false positives; data quality issues slow us down,integration effort; timeline,role-based permissions
+CUST0053,C012,"Some good ideas here, though the value wasn't fully clear to everyone.",team lacks technical bandwidth; data quality issues slow us down,data privacy,custom alert thresholds; role-based permissions
+CUST0054,C012,The team had mixed reactions and wants a follow-up session.,current tools don't scale,timeline,
+CUST0055,C012,The team was impressed with how quickly it surfaced patterns we'd missed.,current tools don't scale; integration with legacy systems is painful,,API access
+CUST0056,C013,Leadership seemed genuinely excited after the walkthrough.,hard to get buy-in from leadership,data privacy,offline mode
+CUST0057,C013,Several stakeholders asked when they could start a pilot.,,price; change management,
+CUST0058,C013,The team had mixed reactions and wants a follow-up session.,current tools don't scale; team lacks technical bandwidth,change management; data privacy,custom alert thresholds
+CUST0059,C014,The team didn't see a strong enough case to prioritize this now.,,price; change management,custom alert thresholds; multi-language support
+CUST0060,C014,"Some good ideas here, though the value wasn't fully clear to everyone.",team lacks technical bandwidth; too many false positives,timeline; data privacy,multi-language support; audit trail
+CUST0061,C014,The team didn't see a strong enough case to prioritize this now.,too many false positives; data quality issues slow us down,data privacy; change management,audit trail
+CUST0062,C015,Concerns about accuracy came up multiple times during the session.,current tools don't scale,,role-based permissions; audit trail
+CUST0063,C015,"Interesting demo, but we need to see it work on our own data first.",current tools don't scale; integration with legacy systems is painful,,
+CUST0064,C015,Leadership seemed genuinely excited after the walkthrough.,,accuracy concerns,
+CUST0065,C015,This addresses a real bottleneck in our current workflow.,too many false positives; data quality issues slow us down,integration effort,
+CUST0066,C015,Concerns about accuracy came up multiple times during the session.,integration with legacy systems is painful,,audit trail
+CUST0067,C016,The team didn't see a strong enough case to prioritize this now.,,accuracy concerns; unclear ROI,
+CUST0068,C016,The team didn't see a strong enough case to prioritize this now.,,,custom alert thresholds; role-based permissions
+CUST0069,C017,,team lacks technical bandwidth; integration with legacy systems is painful,unclear ROI; price,
+CUST0070,C017,Leadership seemed genuinely excited after the walkthrough.,integration with legacy systems is painful; data quality issues slow us down,accuracy concerns,better reporting dashboard; role-based permissions
+CUST0071,C018,Leadership seemed genuinely excited after the walkthrough.,current tools don't scale,,mobile access
+CUST0072,C018,,data quality issues slow us down,,
+CUST0073,C018,Leadership seemed genuinely excited after the walkthrough.,,,
+CUST0074,C018,"Some good ideas here, though the value wasn't fully clear to everyone.",hard to get buy-in from leadership; lack of visibility into root causes,,multi-language support
+CUST0075,C018,The team was impressed with how quickly it surfaced patterns we'd missed.,lack of visibility into root causes; manual process takes too long,,
+CUST0076,C019,The team was impressed with how quickly it surfaced patterns we'd missed.,,change management; timeline,API access; mobile access
+CUST0077,C019,Concerns about accuracy came up multiple times during the session.,data quality issues slow us down,timeline; vendor lock-in,
+CUST0078,C019,Concerns about accuracy came up multiple times during the session.,integration with legacy systems is painful,vendor lock-in,
+CUST0079,C019,"Interesting demo, but we need to see it work on our own data first.",,price; change management,offline mode
+CUST0080,C020,Several stakeholders asked when they could start a pilot.,,change management,
+CUST0081,C020,"Interesting demo, but we need to see it work on our own data first.",,,offline mode; better reporting dashboard
+CUST0082,C020,The team had mixed reactions and wants a follow-up session.,,,
+CUST0083,C020,This overlaps too much with a tool we already have in place.,too many false positives; current tools don't scale,accuracy concerns,
+CUST0084,C020,The team was impressed with how quickly it surfaced patterns we'd missed.,,,custom alert thresholds; audit trail
+CUST0085,C020,The team had mixed reactions and wants a follow-up session.,lack of visibility into root causes,,better reporting dashboard; offline mode
+CUST0086,C020,"Interesting demo, but we need to see it work on our own data first.",too many false positives,unclear ROI; integration effort,
+CUST0087,C020,This addresses a real bottleneck in our current workflow.,integration with legacy systems is painful,price; change management,
+CUST0088,C021,"Interesting demo, but we need to see it work on our own data first.",,vendor lock-in; unclear ROI,
+CUST0089,C021,,,accuracy concerns; integration effort,
+CUST0090,C021,The team had mixed reactions and wants a follow-up session.,,,custom alert thresholds
+CUST0091,C021,This overlaps too much with a tool we already have in place.,hard to get buy-in from leadership; data quality issues slow us down,vendor lock-in,
+CUST0092,C022,The team didn't see a strong enough case to prioritize this now.,lack of visibility into root causes; data quality issues slow us down,data privacy; timeline,multi-language support; API access
+CUST0093,C022,The team didn't see a strong enough case to prioritize this now.,,,
+CUST0094,C022,,,,multi-language support
+CUST0095,C022,The team didn't see a strong enough case to prioritize this now.,data quality issues slow us down,price; data privacy,custom alert thresholds
+CUST0096,C023,"Some good ideas here, though the value wasn't fully clear to everyone.",too many false positives,unclear ROI; price,audit trail
+CUST0097,C023,The team was impressed with how quickly it surfaced patterns we'd missed.,,,
+CUST0098,C023,The team was impressed with how quickly it surfaced patterns we'd missed.,,data privacy; price,
+CUST0099,C024,"Some good ideas here, though the value wasn't fully clear to everyone.",integration with legacy systems is painful; team lacks technical bandwidth,,
+CUST0100,C024,The team didn't see a strong enough case to prioritize this now.,integration with legacy systems is painful,,
+CUST0101,C024,,team lacks technical bandwidth; manual process takes too long,price; change management,
+CUST0102,C024,Several stakeholders asked when they could start a pilot.,hard to get buy-in from leadership,,mobile access
+CUST0103,C024,Several stakeholders asked when they could start a pilot.,integration with legacy systems is painful,accuracy concerns; timeline,mobile access; role-based permissions
+CUST0104,C024,The team had mixed reactions and wants a follow-up session.,team lacks technical bandwidth; data quality issues slow us down,,
+CUST0105,C025,The team was impressed with how quickly it surfaced patterns we'd missed.,,,
+CUST0106,C025,This addresses a real bottleneck in our current workflow.,team lacks technical bandwidth,vendor lock-in; unclear ROI,better reporting dashboard; multi-language support
+CUST0107,C025,This addresses a real bottleneck in our current workflow.,,,custom alert thresholds; mobile access
+CUST0108,C025,Several stakeholders asked when they could start a pilot.,team lacks technical bandwidth,accuracy concerns,
+CUST0109,C025,Several stakeholders asked when they could start a pilot.,,data privacy,
+CUST0110,C025,The team had mixed reactions and wants a follow-up session.,hard to get buy-in from leadership; manual process takes too long,unclear ROI,
+CUST0111,C025,The team was impressed with how quickly it surfaced patterns we'd missed.,too many false positives; lack of visibility into root causes,timeline,role-based permissions; mobile access
+CUST0112,C025,This addresses a real bottleneck in our current workflow.,,accuracy concerns; price,
+CUST0113,C026,This addresses a real bottleneck in our current workflow.,team lacks technical bandwidth,vendor lock-in,better reporting dashboard
+CUST0114,C026,,,timeline; price,multi-language support; API access
+CUST0115,C026,The team was impressed with how quickly it surfaced patterns we'd missed.,too many false positives,accuracy concerns,mobile access; offline mode
+CUST0116,C027,Leadership seemed genuinely excited after the walkthrough.,hard to get buy-in from leadership; team lacks technical bandwidth,unclear ROI,
+CUST0117,C027,The team didn't see a strong enough case to prioritize this now.,,data privacy,
+CUST0118,C028,"Interesting demo, but we need to see it work on our own data first.",integration with legacy systems is painful; team lacks technical bandwidth,,
+CUST0119,C028,Several stakeholders asked when they could start a pilot.,,vendor lock-in,
+CUST0120,C028,This addresses a real bottleneck in our current workflow.,lack of visibility into root causes; too many false positives,change management,role-based permissions
+CUST0121,C028,The team was impressed with how quickly it surfaced patterns we'd missed.,lack of visibility into root causes; too many false positives,,offline mode; custom alert thresholds
+CUST0122,C028,Leadership seemed genuinely excited after the walkthrough.,data quality issues slow us down,,mobile access
+CUST0123,C028,"Some good ideas here, though the value wasn't fully clear to everyone.",,accuracy concerns; change management,mobile access; custom alert thresholds
+CUST0124,C028,This addresses a real bottleneck in our current workflow.,hard to get buy-in from leadership; team lacks technical bandwidth,unclear ROI; accuracy concerns,custom alert thresholds; mobile access
+CUST0125,C028,Several stakeholders asked when they could start a pilot.,integration with legacy systems is painful; hard to get buy-in from leadership,,mobile access; custom alert thresholds
+CUST0126,C029,This overlaps too much with a tool we already have in place.,manual process takes too long,,API access; better reporting dashboard
+CUST0127,C029,The team was impressed with how quickly it surfaced patterns we'd missed.,team lacks technical bandwidth; integration with legacy systems is painful,accuracy concerns; change management,
+CUST0128,C029,The team was impressed with how quickly it surfaced patterns we'd missed.,current tools don't scale; lack of visibility into root causes,change management; integration effort,
+CUST0129,C029,This addresses a real bottleneck in our current workflow.,current tools don't scale; data quality issues slow us down,,
+CUST0130,C029,"Some good ideas here, though the value wasn't fully clear to everyone.",,,API access
+CUST0131,C029,This addresses a real bottleneck in our current workflow.,current tools don't scale,integration effort; unclear ROI,mobile access
+CUST0132,C030,"Some good ideas here, though the value wasn't fully clear to everyone.",,price,API access; mobile access
+CUST0133,C030,"Some good ideas here, though the value wasn't fully clear to everyone.",team lacks technical bandwidth; current tools don't scale,,
+CUST0134,C030,Several stakeholders asked when they could start a pilot.,,,role-based permissions; custom alert thresholds
+CUST0135,C030,The team had mixed reactions and wants a follow-up session.,data quality issues slow us down,change management; vendor lock-in,audit trail; mobile access
+CUST0136,C031,This addresses a real bottleneck in our current workflow.,integration with legacy systems is painful; hard to get buy-in from leadership,vendor lock-in; timeline,offline mode; custom alert thresholds
+CUST0137,C031,The team was impressed with how quickly it surfaced patterns we'd missed.,current tools don't scale,,audit trail
+CUST0138,C031,"Interesting demo, but we need to see it work on our own data first.",hard to get buy-in from leadership; data quality issues slow us down,timeline; price,
+CUST0139,C031,This addresses a real bottleneck in our current workflow.,manual process takes too long,accuracy concerns; integration effort,better reporting dashboard; role-based permissions
+CUST0140,C031,The team had mixed reactions and wants a follow-up session.,,timeline; change management,API access; audit trail
+CUST0141,C032,Several stakeholders asked when they could start a pilot.,,,API access
+CUST0142,C032,Several stakeholders asked when they could start a pilot.,team lacks technical bandwidth; hard to get buy-in from leadership,vendor lock-in; change management,role-based permissions; better reporting dashboard
+CUST0143,C032,,integration with legacy systems is painful,vendor lock-in,
+CUST0144,C032,,manual process takes too long,,
+CUST0145,C032,Leadership seemed genuinely excited after the walkthrough.,hard to get buy-in from leadership; too many false positives,vendor lock-in,
+CUST0146,C033,"Interesting demo, but we need to see it work on our own data first.",too many false positives; manual process takes too long,change management,multi-language support; role-based permissions
+CUST0147,C033,Concerns about accuracy came up multiple times during the session.,too many false positives,unclear ROI; vendor lock-in,offline mode; mobile access
+CUST0148,C033,The team had mixed reactions and wants a follow-up session.,integration with legacy systems is painful; team lacks technical bandwidth,integration effort; timeline,
+CUST0149,C033,The team was impressed with how quickly it surfaced patterns we'd missed.,,timeline; unclear ROI,
+CUST0150,C033,The team was impressed with how quickly it surfaced patterns we'd missed.,current tools don't scale; too many false positives,,
+CUST0151,C033,The team didn't see a strong enough case to prioritize this now.,,timeline; unclear ROI,
+CUST0152,C034,The team was impressed with how quickly it surfaced patterns we'd missed.,,,
+CUST0153,C034,Several stakeholders asked when they could start a pilot.,too many false positives,price,audit trail; multi-language support
+CUST0154,C034,This addresses a real bottleneck in our current workflow.,manual process takes too long; integration with legacy systems is painful,data privacy; unclear ROI,
+CUST0155,C035,"Interesting demo, but we need to see it work on our own data first.",,,
+CUST0156,C035,Concerns about accuracy came up multiple times during the session.,,accuracy concerns; integration effort,better reporting dashboard
+CUST0157,C035,This addresses a real bottleneck in our current workflow.,hard to get buy-in from leadership; team lacks technical bandwidth,integration effort; accuracy concerns,
+CUST0158,C035,Several stakeholders asked when they could start a pilot.,,timeline; accuracy concerns,
+CUST0159,C035,"Some good ideas here, though the value wasn't fully clear to everyone.",hard to get buy-in from leadership,data privacy; accuracy concerns,
+CUST0160,C035,The team had mixed reactions and wants a follow-up session.,team lacks technical bandwidth; lack of visibility into root causes,data privacy; vendor lock-in,multi-language support; better reporting dashboard
+CUST0161,C036,"Some good ideas here, though the value wasn't fully clear to everyone.",,integration effort,audit trail
+CUST0162,C036,"Interesting demo, but we need to see it work on our own data first.",current tools don't scale,integration effort,role-based permissions
+CUST0163,C036,"Interesting demo, but we need to see it work on our own data first.",,data privacy,custom alert thresholds; audit trail
+CUST0164,C037,The team was impressed with how quickly it surfaced patterns we'd missed.,data quality issues slow us down; hard to get buy-in from leadership,accuracy concerns,
+CUST0165,C037,Leadership seemed genuinely excited after the walkthrough.,,vendor lock-in; integration effort,audit trail
+CUST0166,C037,The team was impressed with how quickly it surfaced patterns we'd missed.,,timeline; unclear ROI,mobile access
+CUST0167,C037,This addresses a real bottleneck in our current workflow.,,,
+CUST0168,C038,This addresses a real bottleneck in our current workflow.,hard to get buy-in from leadership; integration with legacy systems is painful,price; data privacy,audit trail
+CUST0169,C038,This addresses a real bottleneck in our current workflow.,,integration effort; data privacy,better reporting dashboard
+CUST0170,C038,Several stakeholders asked when they could start a pilot.,current tools don't scale; manual process takes too long,price; timeline,offline mode
+CUST0171,C039,"Some good ideas here, though the value wasn't fully clear to everyone.",,timeline; vendor lock-in,
+CUST0172,C039,"Some good ideas here, though the value wasn't fully clear to everyone.",integration with legacy systems is painful,accuracy concerns,custom alert thresholds
+CUST0173,C040,The team had mixed reactions and wants a follow-up session.,,timeline,
+CUST0174,C040,This addresses a real bottleneck in our current workflow.,current tools don't scale,,mobile access
+CUST0175,C040,Several stakeholders asked when they could start a pilot.,,timeline,multi-language support; better reporting dashboard
+CUST0176,C041,This addresses a real bottleneck in our current workflow.,,integration effort,audit trail
+CUST0177,C041,This addresses a real bottleneck in our current workflow.,too many false positives; current tools don't scale,,
+CUST0178,C042,This overlaps too much with a tool we already have in place.,team lacks technical bandwidth; integration with legacy systems is painful,,
+CUST0179,C042,The team had mixed reactions and wants a follow-up session.,,integration effort,mobile access; role-based permissions
+CUST0180,C042,The team didn't see a strong enough case to prioritize this now.,data quality issues slow us down,data privacy,offline mode; audit trail
+CUST0181,C042,Several stakeholders asked when they could start a pilot.,,,
+CUST0182,C043,Leadership seemed genuinely excited after the walkthrough.,,,offline mode
+CUST0183,C043,Several stakeholders asked when they could start a pilot.,team lacks technical bandwidth; integration with legacy systems is painful,accuracy concerns; price,custom alert thresholds
+CUST0184,C043,The team was impressed with how quickly it surfaced patterns we'd missed.,current tools don't scale; lack of visibility into root causes,,role-based permissions; multi-language support
+CUST0185,C043,,,vendor lock-in; accuracy concerns,
+CUST0186,C043,"Interesting demo, but we need to see it work on our own data first.",manual process takes too long; too many false positives,accuracy concerns,
+CUST0187,C044,,current tools don't scale; lack of visibility into root causes,,API access; offline mode
+CUST0188,C044,The team didn't see a strong enough case to prioritize this now.,,,
+CUST0189,C044,This addresses a real bottleneck in our current workflow.,hard to get buy-in from leadership,price,
+CUST0190,C044,This addresses a real bottleneck in our current workflow.,data quality issues slow us down,,
+CUST0191,C045,Several stakeholders asked when they could start a pilot.,,,
+CUST0192,C045,"Interesting demo, but we need to see it work on our own data first.",too many false positives; data quality issues slow us down,vendor lock-in,role-based permissions
+CUST0193,C046,This overlaps too much with a tool we already have in place.,lack of visibility into root causes,,
+CUST0194,C046,"Interesting demo, but we need to see it work on our own data first.",too many false positives; hard to get buy-in from leadership,timeline; unclear ROI,role-based permissions; better reporting dashboard
+CUST0195,C046,"Some good ideas here, though the value wasn't fully clear to everyone.",,timeline,audit trail; multi-language support
+CUST0196,C046,Concerns about accuracy came up multiple times during the session.,,unclear ROI; accuracy concerns,API access
+CUST0197,C046,The team didn't see a strong enough case to prioritize this now.,current tools don't scale,,
+CUST0198,C046,Concerns about accuracy came up multiple times during the session.,too many false positives; integration with legacy systems is painful,vendor lock-in; change management,
+CUST0199,C047,,manual process takes too long,data privacy; integration effort,
+CUST0200,C047,The team didn't see a strong enough case to prioritize this now.,current tools don't scale,,custom alert thresholds; audit trail
+CUST0201,C047,Concerns about accuracy came up multiple times during the session.,,,
+CUST0202,C047,The team didn't see a strong enough case to prioritize this now.,lack of visibility into root causes,,better reporting dashboard; custom alert thresholds
+CUST0203,C047,The team was impressed with how quickly it surfaced patterns we'd missed.,team lacks technical bandwidth,integration effort,API access; better reporting dashboard
+CUST0204,C047,"Some good ideas here, though the value wasn't fully clear to everyone.",manual process takes too long; current tools don't scale,unclear ROI; integration effort,better reporting dashboard
+CUST0205,C047,"Some good ideas here, though the value wasn't fully clear to everyone.",manual process takes too long,timeline,
+CUST0206,C047,"Interesting demo, but we need to see it work on our own data first.",data quality issues slow us down; hard to get buy-in from leadership,price,
+CUST0207,C048,This addresses a real bottleneck in our current workflow.,integration with legacy systems is painful; team lacks technical bandwidth,,better reporting dashboard
+CUST0208,C048,Several stakeholders asked when they could start a pilot.,,accuracy concerns,role-based permissions; custom alert thresholds
+CUST0209,C048,Several stakeholders asked when they could start a pilot.,team lacks technical bandwidth; hard to get buy-in from leadership,,
+CUST0210,C048,This overlaps too much with a tool we already have in place.,,unclear ROI; accuracy concerns,custom alert thresholds
+CUST0211,C049,,data quality issues slow us down,,
+CUST0212,C049,"Interesting demo, but we need to see it work on our own data first.",hard to get buy-in from leadership,,role-based permissions; API access
+CUST0213,C049,"Some good ideas here, though the value wasn't fully clear to everyone.",,price,better reporting dashboard
+CUST0214,C049,The team was impressed with how quickly it surfaced patterns we'd missed.,too many false positives; hard to get buy-in from leadership,vendor lock-in,audit trail
+CUST0215,C050,Leadership seemed genuinely excited after the walkthrough.,manual process takes too long,accuracy concerns,better reporting dashboard
+CUST0216,C050,The team didn't see a strong enough case to prioritize this now.,team lacks technical bandwidth; too many false positives,,

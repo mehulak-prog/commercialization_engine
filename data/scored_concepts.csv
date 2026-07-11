@@ -1,0 +1,51 @@
+concept_id,concept_name,industry,problem_area,n_demo_sessions,n_sandbox_trials,n_commercial_signals,demand_intensity,repeatability,engagement_depth,segment_similarity,segment_diversity,revenue_potential,feasibility,strategic_fit_score,avg_objections,avg_objection_themes,confidence_score,cluster,cluster_label,readiness_score,recommended_outcome,top_positive_factor,top_positive_value,weakest_factor,weakest_value
+C001,SignalAI,Insurance,Personalization,8,7,5,0.5574,0.4224,0.327,0.375,1.0,0.3767,0.6481,0.55,2.5,1.0,100.0,1,Mixed/Weak Pattern,44.2,Archive,demand intensity,0.557,engagement depth,0.327
+C002,PulseML,Energy,Fraud Detection,4,4,4,0.4418,0.4883,0.5946,0.5,0.75,0.5627,0.7236,0.9,1.25,1.25,90.6,0,Strong Behavioral Pattern,59.5,Incubate,strategic fit score,0.9,engagement depth,0.595
+C003,VistaML,Energy,Document Intelligence,2,2,2,0.4889,0.27,0.398,0.5,0.5,0.4105,0.5708,0.55,1.5,1.0,46.6,1,Mixed/Weak Pattern,43.5,Archive,demand intensity,0.489,repeatability,0.27
+C004,NexusAI,Energy,Risk Scoring,2,2,2,0.6766,0.5717,0.6882,1.0,0.25,0.5274,0.4432,0.9,1.0,1.5,40.0,0,Strong Behavioral Pattern,63.7,Customer Pilot,demand intensity,0.677,feasibility,0.443
+C005,OrbitAI,Insurance,Quality Control,7,5,5,0.2927,0.5513,0.5179,0.4286,1.0,0.3807,0.3423,0.2,2.64,0.86,100.0,1,Mixed/Weak Pattern,32.0,Archive,repeatability,0.551,strategic fit score,0.2
+C006,BeaconAI,Logistics,Document Intelligence,8,5,5,0.8227,0.5867,0.5969,0.5,0.75,0.566,0.1943,0.9,0.88,1.0,98.7,0,Strong Behavioral Pattern,63.6,Reusable Asset,demand intensity,0.823,feasibility,0.194
+C007,ForgeAI,Retail,Customer Insights,2,2,2,0.9544,0.4133,0.6427,0.5,0.5,0.5396,0.8818,0.55,2.0,2.0,45.5,0,Strong Behavioral Pattern,65.1,MVP Build,demand intensity,0.954,repeatability,0.413
+C008,LumenML,Education,Process Automation,8,7,5,0.1113,0.4186,0.2998,0.5,1.0,0.3112,0.901,0.2,3.0,1.25,98.1,1,Mixed/Weak Pattern,28.4,Archive,feasibility,0.901,demand intensity,0.111
+C009,AtlasML,Healthcare,Document Intelligence,4,4,4,0.5123,0.4792,0.6169,0.5,0.75,0.3983,0.804,0.55,1.75,1.5,90.7,0,Strong Behavioral Pattern,52.3,Incubate,demand intensity,0.512,revenue potential,0.398
+C010,CompassAI,Manufacturing,Process Automation,5,4,5,0.4605,0.4933,0.5557,0.4,1.0,0.4435,0.7301,0.2,2.4,0.6,96.4,1,Mixed/Weak Pattern,42.8,Archive,demand intensity,0.46,strategic fit score,0.2
+C011,PrismAI,Healthcare,Personalization,2,2,2,0.866,0.37,0.6685,0.5,0.5,0.6235,0.911,0.55,0.0,2.0,43.9,0,Strong Behavioral Pattern,67.5,MVP Build,demand intensity,0.866,repeatability,0.37
+C012,FluxAI,Financial Services,Risk Scoring,3,2,3,0.6735,0.43,0.6673,0.3333,0.75,0.5259,0.8988,0.9,1.0,0.67,53.3,0,Strong Behavioral Pattern,67.5,MVP Build,demand intensity,0.674,repeatability,0.43
+C013,SentryML,Insurance,Customer Insights,3,3,3,0.5332,0.3322,0.2613,0.6667,0.5,0.468,0.8085,0.9,3.67,1.67,65.0,2,Promising Pattern,47.4,Incubate,strategic fit score,0.9,engagement depth,0.261
+C014,HarborAI,Retail,Quality Control,3,2,3,0.255,0.425,0.5402,0.6667,0.5,0.3963,0.2292,0.2,1.67,2.0,51.3,1,Mixed/Weak Pattern,30.9,Archive,revenue potential,0.396,strategic fit score,0.2
+C015,CatalystML,Healthcare,Quality Control,5,3,5,0.2797,0.41,0.3742,0.6,0.5,0.3545,0.5584,0.9,3.6,0.4,83.9,1,Mixed/Weak Pattern,38.6,Archive,strategic fit score,0.9,engagement depth,0.374
+C016,MomentumAI,Financial Services,Quality Control,2,1,2,0.1691,0.25,0.4183,0.5,0.5,0.313,0.8758,0.2,4.0,1.0,28.3,1,Mixed/Weak Pattern,25.2,Archive,feasibility,0.876,strategic fit score,0.2
+C017,AnchorAI,Education,Anomaly Detection,2,1,2,0.68,0.2233,0.4833,1.0,0.25,0.7035,0.249,0.55,2.0,1.5,28.5,2,Promising Pattern,47.6,Incubate,demand intensity,0.68,feasibility,0.249
+C018,HorizonML,Manufacturing,Anomaly Detection,5,3,5,0.7872,0.5044,0.6091,0.6,0.75,0.5598,0.2139,0.55,0.6,0.0,82.5,0,Strong Behavioral Pattern,56.1,Customer Pilot,demand intensity,0.787,feasibility,0.214
+C019,VantageAI,Insurance,Personalization,4,3,4,0.3202,0.7,0.7187,0.75,0.5,0.4436,0.7665,0.55,1.25,1.75,70.0,0,Strong Behavioral Pattern,54.3,Incubate,repeatability,0.7,demand intensity,0.32
+C020,CascadeAI,Insurance,Risk Scoring,8,3,5,0.6291,0.3833,0.5571,0.375,0.75,0.4229,0.4951,0.55,1.12,0.75,92.0,0,Strong Behavioral Pattern,50.9,Incubate,demand intensity,0.629,repeatability,0.383
+C021,SignalML,Energy,Risk Scoring,4,4,4,0.45,0.51,0.4552,0.5,0.5,0.2927,0.2185,0.55,2.25,1.25,90.1,1,Mixed/Weak Pattern,37.8,Archive,demand intensity,0.45,feasibility,0.218
+C022,PulseAI,Healthcare,Scheduling Optimization,4,2,4,0.1938,0.335,0.4325,0.5,0.75,0.2558,0.1306,0.2,2.5,1.0,57.9,1,Mixed/Weak Pattern,20.3,Archive,repeatability,0.335,feasibility,0.131
+C023,VistaML,Energy,Customer Insights,3,1,3,0.6897,0.2,0.5827,0.3333,0.75,0.5414,0.7988,0.55,1.67,1.33,34.9,0,Strong Behavioral Pattern,54.5,Incubate,demand intensity,0.69,repeatability,0.2
+C024,NexusAI,Retail,Fraud Detection,6,3,5,0.3977,0.4989,0.3801,0.5,0.5,0.3796,0.799,0.9,2.17,0.67,86.6,1,Mixed/Weak Pattern,51.0,Incubate,strategic fit score,0.9,engagement depth,0.38
+C025,OrbitML,Manufacturing,Fraud Detection,8,6,5,0.8204,0.4772,0.7043,0.5,0.75,0.5769,0.5089,0.9,1.0,1.0,100.0,0,Strong Behavioral Pattern,67.7,MVP Build,demand intensity,0.82,feasibility,0.509
+C026,BeaconAI,Retail,Fraud Detection,3,1,3,0.7189,0.5267,0.6573,0.3333,0.75,0.5239,0.6908,0.9,0.0,1.33,41.7,0,Strong Behavioral Pattern,67.1,MVP Build,demand intensity,0.719,engagement depth,0.657
+C027,ForgeML,Financial Services,Quality Control,2,1,2,0.6239,0.43,0.6087,0.5,0.5,0.4164,0.5288,0.55,2.0,1.0,34.5,0,Strong Behavioral Pattern,49.9,Incubate,demand intensity,0.624,repeatability,0.43
+C028,LumenAI,Energy,Risk Scoring,8,7,5,0.6196,0.4683,0.4669,0.5,0.75,0.4087,0.6666,0.2,1.12,0.75,100.0,1,Mixed/Weak Pattern,47.5,Incubate,demand intensity,0.62,strategic fit score,0.2
+C029,AtlasAI,Manufacturing,Quality Control,6,6,5,0.6714,0.6394,0.5984,0.6667,0.75,0.4587,0.5259,0.9,2.17,1.0,100.0,0,Strong Behavioral Pattern,60.0,Reusable Asset,demand intensity,0.671,engagement depth,0.598
+C030,CompassAI,Healthcare,Risk Scoring,4,3,4,0.6907,0.51,0.5418,0.5,0.5,0.5023,0.345,0.55,1.25,0.75,77.2,0,Strong Behavioral Pattern,53.2,Incubate,demand intensity,0.691,feasibility,0.345
+C031,PrismAI,Energy,Process Automation,5,2,5,0.8227,0.3283,0.5137,0.6,0.5,0.4692,0.4222,0.2,0.5,1.6,65.2,0,Strong Behavioral Pattern,48.7,Incubate,demand intensity,0.823,strategic fit score,0.2
+C032,FluxAI,Insurance,Forecasting,5,4,5,0.6313,0.6458,0.6997,0.6,0.5,0.4772,0.8418,0.55,0.8,0.8,98.0,0,Strong Behavioral Pattern,63.1,Reusable Asset,demand intensity,0.631,engagement depth,0.7
+C033,SentryAI,Manufacturing,Document Intelligence,6,5,5,0.3375,0.724,0.5949,0.6667,0.75,0.4177,0.4694,0.2,2.17,1.5,95.0,1,Mixed/Weak Pattern,40.6,Archive,repeatability,0.724,strategic fit score,0.2
+C034,HarborML,Education,Document Intelligence,3,3,3,0.7896,0.6267,0.5914,0.3333,0.75,0.5179,0.9275,0.9,1.33,1.0,65.7,0,Strong Behavioral Pattern,71.8,MVP Build,demand intensity,0.79,engagement depth,0.591
+C035,CatalystML,Education,Quality Control,6,2,5,0.669,0.54,0.6582,0.5,1.0,0.5527,0.9106,0.9,1.33,1.67,74.7,0,Strong Behavioral Pattern,68.7,MVP Build,demand intensity,0.669,engagement depth,0.658
+C036,MomentumAI,Logistics,Forecasting,3,2,3,0.6721,0.4717,0.5557,1.0,0.25,0.5072,0.1108,0.9,1.33,1.0,48.7,2,Promising Pattern,54.4,Incubate,demand intensity,0.672,feasibility,0.111
+C037,AnchorML,Manufacturing,Anomaly Detection,4,4,4,0.7664,0.3475,0.4796,0.75,0.5,0.592,0.4631,0.9,0.75,1.25,91.4,2,Promising Pattern,61.2,Customer Pilot,demand intensity,0.766,repeatability,0.348
+C038,HorizonML,Manufacturing,Document Intelligence,3,2,3,0.5021,0.4333,0.5627,0.3333,0.75,0.335,0.5877,0.9,4.67,2.0,52.2,1,Mixed/Weak Pattern,43.4,Archive,strategic fit score,0.9,revenue potential,0.335
+C039,VantageML,Logistics,Customer Insights,2,1,2,0.132,0.2533,0.5707,0.5,0.5,0.1727,0.5415,0.2,2.0,1.5,26.4,1,Mixed/Weak Pattern,25.0,Archive,feasibility,0.542,revenue potential,0.173
+C040,CascadeML,Manufacturing,Document Intelligence,3,2,3,0.5249,0.2433,0.4828,0.6667,0.5,0.5367,0.7645,0.55,1.0,0.67,53.7,2,Promising Pattern,51.4,Incubate,demand intensity,0.525,repeatability,0.243
+C041,SignalAI,Retail,Risk Scoring,2,2,2,0.9126,0.2467,0.402,1.0,0.25,0.5287,0.7525,0.9,1.0,0.5,45.5,2,Promising Pattern,65.1,MVP Build,demand intensity,0.913,repeatability,0.247
+C042,PulseAI,Retail,Risk Scoring,4,2,4,0.2409,0.37,0.3258,0.5,0.75,0.387,0.5676,0.55,3.5,0.5,64.3,1,Mixed/Weak Pattern,31.8,Archive,strategic fit score,0.55,engagement depth,0.326
+C043,VistaAI,Energy,Scheduling Optimization,5,3,5,0.7438,0.5022,0.7002,0.6,0.5,0.4902,0.4579,0.55,0.2,1.0,87.0,0,Strong Behavioral Pattern,58.3,Customer Pilot,demand intensity,0.744,feasibility,0.458
+C044,NexusAI,Insurance,Fraud Detection,4,3,4,0.3212,0.4311,0.3287,0.25,1.0,0.3152,0.5332,0.55,1.75,0.25,76.7,1,Mixed/Weak Pattern,38.2,Archive,strategic fit score,0.55,engagement depth,0.329
+C045,OrbitML,Retail,Quality Control,2,1,2,0.527,0.34,0.498,1.0,0.25,0.5355,0.8422,0.2,1.0,0.5,28.0,2,Promising Pattern,48.7,Incubate,demand intensity,0.527,strategic fit score,0.2
+C046,BeaconAI,Education,Fraud Detection,6,2,5,0.3662,0.3733,0.4652,0.5,0.75,0.3334,0.6198,0.9,1.5,1.17,74.7,1,Mixed/Weak Pattern,47.9,Incubate,strategic fit score,0.9,engagement depth,0.465
+C047,ForgeML,Manufacturing,Risk Scoring,8,6,5,0.2078,0.5278,0.4151,0.5,0.75,0.2782,0.2061,0.9,3.88,0.88,98.4,1,Mixed/Weak Pattern,32.1,Archive,strategic fit score,0.9,feasibility,0.206
+C048,LumenML,Energy,Scheduling Optimization,4,4,4,0.6516,0.5783,0.6254,0.5,0.75,0.4819,0.6759,0.2,2.75,0.75,89.4,0,Strong Behavioral Pattern,48.5,Incubate,demand intensity,0.652,strategic fit score,0.2
+C049,AtlasML,Financial Services,Scheduling Optimization,4,2,4,0.475,0.1633,0.2367,1.0,0.25,0.392,0.4775,0.9,2.0,0.5,57.6,2,Promising Pattern,42.0,Archive,strategic fit score,0.9,repeatability,0.163
+C050,CompassAI,Financial Services,Scheduling Optimization,2,2,2,0.62,0.4717,0.4753,0.5,0.5,0.3054,0.8975,0.9,2.0,0.5,42.0,1,Mixed/Weak Pattern,57.6,Customer Pilot,demand intensity,0.62,revenue potential,0.305

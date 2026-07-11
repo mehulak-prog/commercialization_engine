@@ -1,0 +1,51 @@
+concept_id,concept_name,industry,problem_area,target_user,delivery_complexity,strategic_fit
+C001,SignalAI,Insurance,Personalization,Compliance Officer,Medium,Medium
+C002,PulseML,Energy,Fraud Detection,Compliance Officer,Low,High
+C003,VistaML,Energy,Document Intelligence,Compliance Officer,Medium,Medium
+C004,NexusAI,Energy,Risk Scoring,Clinician,Medium,High
+C005,OrbitAI,Insurance,Quality Control,IT Admin,High,Low
+C006,BeaconAI,Logistics,Document Intelligence,Ops Manager,High,High
+C007,ForgeAI,Retail,Customer Insights,Data Analyst,Low,Medium
+C008,LumenML,Education,Process Automation,Data Analyst,Low,Low
+C009,AtlasML,Healthcare,Document Intelligence,Data Analyst,Low,Medium
+C010,CompassAI,Manufacturing,Process Automation,Data Analyst,Low,Low
+C011,PrismAI,Healthcare,Personalization,Executive Sponsor,Low,Medium
+C012,FluxAI,Financial Services,Risk Scoring,Frontline Worker,Low,High
+C013,SentryML,Insurance,Customer Insights,Clinician,Low,High
+C014,HarborAI,Retail,Quality Control,Executive Sponsor,High,Low
+C015,CatalystML,Healthcare,Quality Control,Data Analyst,Medium,High
+C016,MomentumAI,Financial Services,Quality Control,IT Admin,Low,Low
+C017,AnchorAI,Education,Anomaly Detection,Store Manager,High,Medium
+C018,HorizonML,Manufacturing,Anomaly Detection,Data Analyst,High,Medium
+C019,VantageAI,Insurance,Personalization,Data Analyst,Low,Medium
+C020,CascadeAI,Insurance,Risk Scoring,Data Analyst,Medium,Medium
+C021,SignalML,Energy,Risk Scoring,Data Analyst,High,Medium
+C022,PulseAI,Healthcare,Scheduling Optimization,Ops Manager,High,Low
+C023,VistaML,Energy,Customer Insights,IT Admin,Low,Medium
+C024,NexusAI,Retail,Fraud Detection,Ops Manager,Low,High
+C025,OrbitML,Manufacturing,Fraud Detection,Data Analyst,Medium,High
+C026,BeaconAI,Retail,Fraud Detection,Ops Manager,Medium,High
+C027,ForgeML,Financial Services,Quality Control,IT Admin,Medium,Medium
+C028,LumenAI,Energy,Risk Scoring,Frontline Worker,Medium,Low
+C029,AtlasAI,Manufacturing,Quality Control,Ops Manager,Medium,High
+C030,CompassAI,Healthcare,Risk Scoring,Compliance Officer,High,Medium
+C031,PrismAI,Energy,Process Automation,Compliance Officer,Medium,Low
+C032,FluxAI,Insurance,Forecasting,Executive Sponsor,Low,Medium
+C033,SentryAI,Manufacturing,Document Intelligence,Executive Sponsor,Medium,Low
+C034,HarborML,Education,Document Intelligence,Frontline Worker,Low,High
+C035,CatalystML,Education,Quality Control,Frontline Worker,Low,High
+C036,MomentumAI,Logistics,Forecasting,Clinician,High,High
+C037,AnchorML,Manufacturing,Anomaly Detection,Frontline Worker,Medium,High
+C038,HorizonML,Manufacturing,Document Intelligence,Clinician,Medium,High
+C039,VantageML,Logistics,Customer Insights,Executive Sponsor,Medium,Low
+C040,CascadeML,Manufacturing,Document Intelligence,Frontline Worker,Low,Medium
+C041,SignalAI,Retail,Risk Scoring,Compliance Officer,Low,High
+C042,PulseAI,Retail,Risk Scoring,Clinician,Medium,Medium
+C043,VistaAI,Energy,Scheduling Optimization,Frontline Worker,Medium,Medium
+C044,NexusAI,Insurance,Fraud Detection,Compliance Officer,Medium,Medium
+C045,OrbitML,Retail,Quality Control,IT Admin,Low,Low
+C046,BeaconAI,Education,Fraud Detection,IT Admin,Medium,High
+C047,ForgeML,Manufacturing,Risk Scoring,Clinician,High,High
+C048,LumenML,Energy,Scheduling Optimization,Frontline Worker,Medium,Low
+C049,AtlasML,Financial Services,Scheduling Optimization,Frontline Worker,Medium,High
+C050,CompassAI,Financial Services,Scheduling Optimization,Clinician,Low,High

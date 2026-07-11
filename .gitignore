@@ -1,0 +1,25 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Never commit API keys or secrets
+.env
+*.key
+secrets.txt
+
+# Streamlit local cache
+.streamlit/secrets.toml
