@@ -65,9 +65,6 @@ followed by a table of the top 10 concepts by readiness score. And `data/scored_
 2. **Silhouette score** — printed value should ideally be above ~0.15-0.2. If it's very low (near 0) or negative, the clusters aren't well separated — flag this back and we'll discuss (could mean features need reweighting, or k range needs adjusting).
 3. **Spot-check one concept's logic** — pick any `concept_id` from `scored_concepts.csv`, trace its `readiness_score`, `confidence_score`, and `recommended_outcome` back against the `decide_outcome()` rules in `ml_model.py` to confirm the logic fired the way you'd expect.
 
-## If something errors out
-
-Copy the exact error message (the last ~15-20 lines of the traceback) and bring it back — don't try to guess-fix ML/pandas errors on your own, they're usually a one-line issue but easy to misdiagnose.
 
 ## Next steps (not built yet)
 
