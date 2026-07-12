@@ -25,7 +25,7 @@ READINESS_WEIGHTS = {
 }
 assert abs(sum(READINESS_WEIGHTS.values()) - 1.0) < 1e-9
 
-OBJECTION_PENALTY_WEIGHT = 3.0   # points off per avg objection above baseline of 1
+OBJECTION_PENALTY_WEIGHT = 3.0   
 
 
 def pick_k(X, k_range=range(2, 6)):

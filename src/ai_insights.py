@@ -7,7 +7,7 @@ GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
 REQUEST_TIMEOUT_SECONDS = 12
 
-# Offline templates - anchored on the user's own 5 outcome templates,
+# Offline templates
 
 OFFLINE_TEMPLATES = {
     "MVP Build": (
@@ -117,7 +117,7 @@ def generate_narrative(row: pd.Series, api_key: str | None = None) -> tuple[str,
             if text:
                 return text, "llm"
         except Exception:
-            pass  # fall through to offline template, no crash
+            pass 
     return build_offline_narrative(row), "offline"
 
 

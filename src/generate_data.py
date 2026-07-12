@@ -90,7 +90,6 @@ def generate():
         suffix = "AI" if rng.random() < 0.5 else "ML"
         name = f"{stem}{suffix}"
         strategic_fit_latent = latent.loc[i, "true_strategic_fit_latent"]
-        # strategic_fit as a noisy categorical rating a real exec might give
         fit_score = clip(strategic_fit_latent + rng.normal(0, 0.12), 0, 1)
         strategic_fit = (
             "High" if fit_score > 0.66 else "Medium" if fit_score > 0.33 else "Low"
@@ -146,7 +145,6 @@ def generate():
         repeatability = latent.loc[i, "true_repeatability"]
         demand = latent.loc[i, "true_demand_intensity"]
         custs = demo_customers_by_concept.get(cid, [])
-        # not every customer who saw a demo tries the sandbox (real-world drop-off)
         trial_custs = [c for c in custs if rng.random() < 0.7]
         if not trial_custs:
             trial_custs = custs[:1]

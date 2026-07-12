@@ -20,10 +20,7 @@ def build_features():
     comm = pd.read_csv(DATA_DIR / "commercial_signals.csv")
     text = pd.read_csv(DATA_DIR / "text_feedback.csv")
 
-    # ---- Missing-value handling strategy (documented, not silent) ----
-    # Numeric raw signals: median-impute PER CONCEPT first (preserves each
-    # concept's own tendency), falling back to global median if a concept
-    # has zero non-null values for that field.
+
     numeric_demo_cols = ["feedback_score", "follow_up_requested",
                           "decision_maker_present", "objections_count"]
     numeric_usage_cols = ["trial_sessions", "feature_clicks", "repeat_usage_days",
@@ -95,8 +92,6 @@ def build_features():
         )
 
         # --- Segment similarity: how concentrated demand is across segments
-        # (high similarity = one clear segment resonates; used later as a
-        #  scaling signal for repeatable/reusable-asset potential) ---
         if n_demos and d["segment"].nunique() > 0:
             seg_counts = d["segment"].value_counts(normalize=True)
             segment_similarity = seg_counts.max()  # concentration in dominant segment
