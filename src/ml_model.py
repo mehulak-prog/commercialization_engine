@@ -23,11 +23,11 @@ READINESS_WEIGHTS = {
     "feasibility": 0.14,
     "strategic_fit_score": 0.16,
 }
-assert abs(sum(READINESS_WEIGHTS.values()) - 1.0) < 1e-9
+assert abs(sum(READINESS_WEIGHTS.values()) - 1.0) < 1e-9 #Asserting that values might have tiny error
 
-OBJECTION_PENALTY_WEIGHT = 3.0   
+OBJECTION_PENALTY_WEIGHT = 3.0   # points off per avg objection above baseline of 1
 
-
+""" Calculating the best k value based on silhoutte score,(2,6) range for granularity adn to avoid congestion"""
 def pick_k(X, k_range=range(2, 6)):
     best_k, best_score = 2, -1
     for k in k_range:
@@ -46,10 +46,10 @@ def run_model():
     # ---- 1. Clustering ----
     X = features[CLUSTER_FEATURES].values
     scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
+    X_scaled = scaler.fit_transform(X) #Scaling and transforming to ensure no single feature dominates the distance calculation
 
     best_k, sil_score = pick_k(X_scaled)
-    kmeans = KMeans(n_clusters=best_k, random_state=RANDOM_STATE, n_init=10).fit(X_scaled)
+    kmeans = KMeans(n_clusters=best_k, random_state=RANDOM_STATE, n_init=10).fit(X_scaled)# best k value is calculated and the model is fitted
     features["cluster"] = kmeans.labels_
 
     # Label clusters by their mean demand+repeatability so they read naturally
@@ -77,7 +77,7 @@ def run_model():
     own_cluster_dist = distances[np.arange(len(features)), features["cluster"]]
     dist_norm = (own_cluster_dist - own_cluster_dist.min()) / (np.ptp(own_cluster_dist) + 1e-9)
     cohesion_adjustment = (1 - dist_norm) * 10 - 5
-    features["confidence_score"] = (features["confidence_score"] + cohesion_adjustment).clip(0, 100).round(1)
+    features["confidence_score"] = (features["confidence_score"] + cohesion_adjustment).clip(0, 100).round(1) #adding cohesion to confidence as it is a reliabilty score unlike readniess which is quality metric
 
     # ---- 3. Rule-based outcome mapping ----
     def decide_outcome(row):

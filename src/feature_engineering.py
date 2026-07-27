@@ -4,15 +4,15 @@ from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
-DELIVERY_COMPLEXITY_MAP = {"Low": 0.9, "Medium": 0.55, "High": 0.2}  # inverted -> feasibility proxy
+DELIVERY_COMPLEXITY_MAP = {"Low": 0.9, "Medium": 0.55, "High": 0.2}  #Lookup dict to fill numerical values to categorical columns 
 STRATEGIC_FIT_MAP = {"Low": 0.2, "Medium": 0.55, "High": 0.9}
 BUDGET_SIGNAL_MAP = {"Confirmed": 1.0, "Likely": 0.66, "Unclear": 0.33, "None": 0.0}
 
 
 def safe_div(a, b):
-    return a / b if b not in (0, None) and not pd.isna(b) else 0.0
+    return a / b if b not in (0, None) and not pd.isna(b) else 0.0 #safety mechanism to ensure does not / by b when it's o,None or NaN isntead fills 0.0
 
-
+#Reading the datasets
 def build_features():
     concepts = pd.read_csv(DATA_DIR / "product_concepts.csv")
     demo = pd.read_csv(DATA_DIR / "customer_demo_signals.csv")
@@ -28,6 +28,7 @@ def build_features():
     numeric_comm_cols = ["pilot_interest", "urgency_score", "willingness_to_pay",
                           "expected_value", "implementation_risk"]
 
+    #Replaceing the NaN and missing values by median for missing values in a column and global median for a column with all missing value
     def impute_per_concept(df, cols):
         df = df.copy()
         for col in cols:
@@ -44,7 +45,7 @@ def build_features():
     comm["budget_numeric"] = comm["budget_signal"].map(BUDGET_SIGNAL_MAP)
 
     text = text.fillna({"customer_comments": "", "pain_point_statements": "",
-                         "objection_themes": "", "requested_capabilities": ""})
+                         "objection_themes": "", "requested_capabilities": ""}) #filling them with empty strings rather than 0 as they are text fields 
 
     rows = []
     for _, concept in concepts.iterrows():
@@ -59,6 +60,8 @@ def build_features():
         n_comm = len(c)
         n_text = len(t)
 
+        """Choosing values that are more likely to affect the respective feature , purely based on judgement """
+        
         # --- Demand intensity: how strongly customers react in demos + commercial signals ---
         avg_feedback = d["feedback_score"].mean() if n_demos else 2.5
         follow_up_rate = d["follow_up_requested"].mean() if n_demos else 0

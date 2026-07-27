@@ -7,7 +7,7 @@ GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
 REQUEST_TIMEOUT_SECONDS = 12
 
-# Offline templates
+# Offline templates for fallback incase user has no API key
 
 OFFLINE_TEMPLATES = {
     "MVP Build": (
@@ -63,7 +63,7 @@ def build_offline_narrative(row: pd.Series) -> str:
         weak_factor=row["weakest_factor"],
     )
 
-
+#prompt for AI insight
 def build_llm_prompt(row: pd.Series) -> str:
     """Instructs the LLM to write in the same register/structure as the
     offline templates, but reasoning freshly from the concept's actual data
@@ -90,22 +90,22 @@ raw numbers mechanically; weave them into natural sentences."""
 def generate_llm_narrative(row: pd.Series, api_key: str) -> str:
     headers = {
         "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
+        "Content-Type": "application/json",#Says im sending the data in JSON format
     }
     payload = {
         "model": GROQ_MODEL,
         "messages": [
             {"role": "user", "content": build_llm_prompt(row)}
         ],
-        "temperature": 0.4,
-        "max_tokens": 220,
+        "temperature": 0.4, #controls randomness
+        "max_tokens": 220, #mas token to use per ai insight
     }
-    response = requests.post(
+    response = requests.post( #uses request library to send a HTTP post req to GROQ , and if GROQ does not reply in 12 secs
         GROQ_URL, headers=headers, json=payload, timeout=REQUEST_TIMEOUT_SECONDS
     )
     response.raise_for_status()
     data = response.json()
-    return data["choices"][0]["message"]["content"].strip()
+    return data["choices"][0]["message"]["content"].strip() #converts JSON to actual generated text
 
 
 def generate_narrative(row: pd.Series, api_key: str | None = None) -> tuple[str, str]:
@@ -120,7 +120,7 @@ def generate_narrative(row: pd.Series, api_key: str | None = None) -> tuple[str,
             pass 
     return build_offline_narrative(row), "offline"
 
-
+""" Pre-generates the narratives and stores them, usefl for offline review or testing"""
 def generate_all_narratives(api_key: str | None = None) -> pd.DataFrame:
     scored = pd.read_csv(DATA_DIR / "scored_concepts.csv")
     narratives, sources = [], []

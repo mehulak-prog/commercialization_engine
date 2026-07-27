@@ -44,7 +44,7 @@ def maybe_missing(value, p_missing=0.06):
     """Randomly null out a value to simulate real-world missingness."""
     return np.nan if rng.random() < p_missing else value
 
-
+"""Clipping fucntion makes sure that the values stays within the specified range"""
 def clip(x, lo, hi):
     return max(lo, min(hi, x))
 
@@ -72,7 +72,7 @@ def generate():
         "is_flagship": [False] * n_std + [True] * n_flag,
     })
 
-    
+    #Shuffling to ensure that the flagship concepts are scattered and we reassign the index
     shuffle_idx = rng.permutation(len(latent))
     latent = latent.iloc[shuffle_idx].reset_index(drop=True)
     latent["concept_id"] = concept_ids 
@@ -89,12 +89,13 @@ def generate():
         stem = CONCEPT_NAME_STEMS[i % len(CONCEPT_NAME_STEMS)]
         suffix = "AI" if rng.random() < 0.5 else "ML"
         name = f"{stem}{suffix}"
-        strategic_fit_latent = latent.loc[i, "true_strategic_fit_latent"]
-        fit_score = clip(strategic_fit_latent + rng.normal(0, 0.12), 0, 1)
+        strategic_fit_latent = latent.loc[i, "true_strategic_fit_latent"] #We calac the strategic_fit score 
+        fit_score = clip(strategic_fit_latent + rng.normal(0, 0.12), 0, 1) #adding gaussian noise to stratigicfit score and 
+                                                                           #clipping it in the range and storing in the fit_score 
         strategic_fit = (
             "High" if fit_score > 0.66 else "Medium" if fit_score > 0.33 else "Low"
         )
-        feasibility_latent = latent.loc[i, "true_feasibility"]
+        feasibility_latent = latent.loc[i, "true_feasibility"]#Similarily for complexity_score
         complexity_score = clip(1 - feasibility_latent + rng.normal(0, 0.15), 0, 1)
         delivery_complexity = (
             "High" if complexity_score > 0.66 else "Medium" if complexity_score > 0.33 else "Low"
@@ -112,22 +113,22 @@ def generate():
 
     # ---- 3. customer_demo_signals.csv (multiple demos per concept) ----
     demo_rows = []
-    cust_counter = 1
+    cust_counter = 1 #global cust_counter to ensure that 1 concept does not get the same customer twice   
     for i, cid in enumerate(concept_ids):
         demand = latent.loc[i, "true_demand_intensity"]
-        n_demos = int(rng.integers(2, 9))  t
+        n_demos = int(rng.integers(2, 9))  t #random no of demos per concept in the range 2-8
         start_date = datetime(2025, 9, 1)
         end_date = datetime(2026, 6, 30)
         for _ in range(n_demos):
-            cust_id = f"CUST{str(cust_counter).zfill(4)}"
+            cust_id = f"CUST{str(cust_counter).zfill(4)}"#Changing it to str and padding with 4 integers
             cust_counter += 1
-            base_feedback = clip(demand * 5 + rng.normal(0, 1.1), 1, 5)
+            base_feedback = clip(demand * 5 + rng.normal(0, 1.1), 1, 5)#calculatin base_feedback and clipping it
             demo_rows.append({
                 "customer_id": cust_id,
                 "concept_id": cid,
                 "segment": rng.choice(SEGMENTS),
                 "demo_date": random_date(start_date, end_date).strftime("%Y-%m-%d"),
-                "feedback_score": maybe_missing(round(base_feedback, 1)),
+                "feedback_score": maybe_missing(round(base_feedback, 1)),#maybe_missing is used to add some NaN values to mimic real-world data
                 "follow_up_requested": maybe_missing(
                     int(rng.random() < clip(demand + rng.normal(0, 0.2), 0, 1))
                 ),
@@ -140,14 +141,14 @@ def generate():
 
     # ---- 4. sandbox_usage.csv (usage sessions, tied to same customers where relevant) ----
     usage_rows = []
-    demo_customers_by_concept = customer_demo_signals.groupby("concept_id")["customer_id"].apply(list)
+    demo_customers_by_concept = customer_demo_signals.groupby("concept_id")["customer_id"].apply(list) #gruping customers based on concept and loading them into a list 
     for i, cid in enumerate(concept_ids):
         repeatability = latent.loc[i, "true_repeatability"]
         demand = latent.loc[i, "true_demand_intensity"]
         custs = demo_customers_by_concept.get(cid, [])
-        trial_custs = [c for c in custs if rng.random() < 0.7]
+        trial_custs = [c for c in custs if rng.random() < 0.7]  #70% probability that a customer will try the sandbox demo
         if not trial_custs:
-            trial_custs = custs[:1]
+            trial_custs = custs[:1]#if by-chance a concept has 0 demo, it ensures that a concept has atleast 1 cust trying the sandbox
         for cust_id in trial_custs:
             sessions = int(clip(rng.poisson(lam=repeatability * 6 + 1), 1, 20))
             usage_rows.append({
@@ -179,7 +180,7 @@ def generate():
         feasibility = latent.loc[i, "true_feasibility"]
         strategic = latent.loc[i, "true_strategic_fit_latent"]
         custs = demo_customers_by_concept.get(cid, [])
-        sample_custs = custs if len(custs) <= 5 else list(rng.choice(custs, 5, replace=False))
+        sample_custs = custs if len(custs) <= 5 else list(rng.choice(custs, 5, replace=False)) # if a concept has less than 5 cust use all, if more than 5, then use only disticnt cust
         for cust_id in sample_custs:
             urgency = clip(demand + rng.normal(0, 0.15), 0, 1)
             comm_rows.append({
@@ -242,10 +243,10 @@ def generate():
     for i, cid in enumerate(concept_ids):
         demand = latent.loc[i, "true_demand_intensity"]
         custs = demo_customers_by_concept.get(cid, [])
-        for cust_id in custs:
+        for cust_id in custs: """ comapres the demand and r value randomly and based on that gives textual feedback"""
             r = rng.random()
             if r < demand:
-                comment = rng.choice(comment_templates_positive)
+                comment = rng.choice(comment_templates_positive) 
             elif r < demand + 0.3:
                 comment = rng.choice(comment_templates_neutral)
             else:
@@ -258,11 +259,11 @@ def generate():
                 "concept_id": cid,
                 "customer_comments": maybe_missing(comment, 0.08),
                 "pain_point_statements": maybe_missing(
-                    "; ".join(rng.choice(pain_points_bank, n_pain, replace=False)) if n_pain else "",
+                    "; ".join(rng.choice(pain_points_bank, n_pain, replace=False)) if n_pain else "", #based on n_pain adds those many no of unique statements joined by ;
                     0.1
                 ),
                 "objection_themes": maybe_missing(
-                    "; ".join(rng.choice(objection_bank, n_obj, replace=False)) if n_obj else "",
+                    "; ".join(rng.choice(objection_bank, n_obj, replace=False)) if n_obj else "", 
                     0.1
                 ),
                 "requested_capabilities": maybe_missing(
